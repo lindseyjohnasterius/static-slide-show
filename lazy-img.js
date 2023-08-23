@@ -69,4 +69,3 @@ class LazyImg extends HTMLElement {
 }
 
 customElements.define('lazy-img', LazyImg);
-
