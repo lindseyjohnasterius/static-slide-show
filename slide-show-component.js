@@ -1,4 +1,3 @@
-// Define the custom slide-show element
 class SlideShow extends HTMLElement {
 
   connectedCallback(){
@@ -18,9 +17,7 @@ class SlideShow extends HTMLElement {
     // Set a click event listener to change the image on every click
     this.addEventListener('click', () => this.loadRandomImage());
 
-    // Set an interval to change the image every 5 seconds (5000 milliseconds)
-    setInterval(() => this.loadRandomImage(), 5000);
-
+    this.loadRandomImage();
   }
 
   // Load the image data from the JSON file using fetch
@@ -52,12 +49,10 @@ class SlideShow extends HTMLElement {
 
   // Render the slide-show element with the current image
   render() {
-    this.innerHTML = `<img src="${this.currentImage}" alt="Random Image">`;
+    this.innerHTML = `<lazy-img src="${this.currentImage}" alt="Random Image"></lazy-img>`;
   }
 }
 
 // Define the custom element using the 'slide-show' tag
 customElements.define('slide-show', SlideShow);
-
-
 
