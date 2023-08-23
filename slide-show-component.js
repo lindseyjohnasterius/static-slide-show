@@ -55,4 +55,3 @@ class SlideShow extends HTMLElement {
 
 // Define the custom element using the 'slide-show' tag
 customElements.define('slide-show', SlideShow);
-
