@@ -23,11 +23,9 @@ class SlideShow extends HTMLElement {
   // Load the image data from the JSON file using fetch
   loadImageData() {
     const jsonFilePath = this.src; // Replace with the correct JSON file path
-    console.log(this.src);
     fetch(jsonFilePath)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         this.imageData = data;
         this.loadRandomImage();
       })
