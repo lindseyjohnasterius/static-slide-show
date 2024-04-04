@@ -13,7 +13,7 @@ Generates a static slideshow of images for upload
 - Run the build script:
 
 ```sh
-  node builde-slideshow.js
+  node build-slideshow.js
 ```
 
 deploy folder to static bucket. 
