@@ -55,17 +55,6 @@ class LazyImg extends HTMLElement {
       },5000 * Math.random())
     }
   }
-
-
-  static get observedAttributes() {
-    return [];
-  }
-
-  attributeChangedCallback(name, old_value, new_value) {
-    switch (name) {
-      default:
-    }
-  }
 }
 
 customElements.define('lazy-img', LazyImg);

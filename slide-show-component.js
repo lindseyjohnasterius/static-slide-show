@@ -16,8 +16,6 @@ class SlideShow extends HTMLElement {
     // Set a click event listener to change the image on every click
     this.addEventListener('click', () => this.loadRandomImage());
     
-    // Initialize with a random image
-    this.loadRandomImage();
   }
 
   // Load the image data from the JSON file using fetch
@@ -27,6 +25,7 @@ class SlideShow extends HTMLElement {
       .then(response => response.json())
       .then(data => {
         this.imageData = data;
+        // Initialize with a random image
         this.loadRandomImage();
       })
       .catch(error => {
