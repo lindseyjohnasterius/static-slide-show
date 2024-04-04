@@ -4,7 +4,6 @@ class SlideShow extends HTMLElement {
     // Store the JSON data containing image paths
     this.imageData = []
 
-    // Initialize with a random image
     this.currentImage = '';
     this.src = this.getAttribute('src');
     if(this.src === null){
@@ -16,7 +15,8 @@ class SlideShow extends HTMLElement {
 
     // Set a click event listener to change the image on every click
     this.addEventListener('click', () => this.loadRandomImage());
-
+    
+    // Initialize with a random image
     this.loadRandomImage();
   }
 
